@@ -1,4 +1,4 @@
-from factories import TreeStyleFactory, RectangleStyleFactory, PokerFaceIconFactory, NothingIconFactory
+from factories import TreeStyleFactory, RectangleStyleFactory, PokerFaceIconFactory, NothingIconFactory, configIconFactory
 from builder import JSONBuilder
 
 class JSONExplorer:
@@ -65,6 +65,8 @@ if __name__ == "__main__":
         icon_factory = PokerFaceIconFactory()
     elif icon_family == "nothing":
         icon_factory = NothingIconFactory()
+    elif icon_family == "config":
+        icon_factory = configIconFactory()
     else:
         raise ValueError("Unknown icon family")
 

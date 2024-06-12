@@ -1,0 +1,23 @@
+{
+    "name": "Bob",
+    "age": 30,
+    "isStudent": false,
+    "contact": {
+        "email": "zhangsan@example.com",
+        "phone": "+1234567890"
+    },
+    "education": {
+            "degree": "Bachelor",
+            "major": "Computer Science",
+            "year": 2015,
+            "university": "Example University"
+    },
+    "hobbies": {"reading": null, "cycling" : null, "coding" : null},
+    "address": {
+        "street": "123 Elm Street",
+        "city": "Springfield",
+        "state": "Illinois",
+        "zip": "62704"
+    }
+}
+   

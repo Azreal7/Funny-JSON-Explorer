@@ -1,4 +1,5 @@
 from components import Composite, Leaf
+import json
 
 class StyleFactory:
     def create_component(self, name, is_leaf):
@@ -30,3 +31,14 @@ class PokerFaceIconFactory(IconFactory):
 class NothingIconFactory(IconFactory):
     def get_icon(self, node_type):
         return " "
+
+# config.json中，key为节点类型，value为节点图标
+class configIconFactory(IconFactory):
+    def get_icon(self, node_type):
+        icons = {}
+        with open("config.json") as f:
+            data = json.load(f)
+            for key, value in data.items():
+                # print(key, value)
+                icons[key] = value
+        return icons[node_type]
