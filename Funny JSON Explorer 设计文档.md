@@ -71,7 +71,7 @@
 
 3. 运行命令：
    ```bash
-   python JSONExplorer.py sample.json tree poker
+   python ./main -f [filename] -s [style] -i [icon]
    ```
 
 4. 该命令将读取 `sample.json` 文件，使用树形风格和扑克图标族展示 JSON 结构。
