@@ -7,7 +7,7 @@ if __name__ == "__main__":
         print("Usage: python JSONExplorer.py -f <json_file> -s <style> -i <icon_family>")
         sys.exit(1)
 
-    json_file = "jsons/" + sys.argv[2] + ".json"
+    json_file = sys.argv[2]
     style = sys.argv[4]
     icon_family = sys.argv[6]
 
