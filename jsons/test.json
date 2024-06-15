@@ -6,13 +6,21 @@
         "email": "zhangsan@example.com",
         "phone": "+1234567890"
     },
-    "education": {
+    "education": [
+        {
             "degree": "Bachelor",
             "major": "Computer Science",
             "year": 2015,
             "university": "Example University"
-    },
-    "hobbies": {"reading": null, "cycling" : null, "coding" : null},
+        },
+        {
+            "degree": "Master",
+            "major": "Data Science",
+            "year": 2018,
+            "university": "Another Example University"
+        }
+    ],
+    "hobbies": ["reading", "cycling", "coding"],
     "address": {
         "street": "123 Elm Street",
         "city": "Springfield",
@@ -20,4 +28,3 @@
         "zip": "62704"
     }
 }
-   

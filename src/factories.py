@@ -1,23 +1,23 @@
-from components import Composite, Leaf
+from src.components import Composite, Leaf
 import json
 
 class StyleFactory:
-    def create_component(self, name, is_leaf):
+    def create_component(self):
         raise NotImplementedError
 
 class TreeStyleFactory(StyleFactory):
-    def create_component(self, name, is_leaf):
+    def create_component(self, name, is_leaf, depth, icon_factory):
         if is_leaf:
-            return Leaf(name, "tree")
+            return Leaf(name, "tree", icon_factory, depth)
         else:
-            return Composite(name, "tree")
+            return Composite(name, "tree", icon_factory, depth)
 
 class RectangleStyleFactory(StyleFactory):
-    def create_component(self, name, is_leaf):
+    def create_component(self, name, is_leaf, depth, icon_factory):
         if is_leaf:
-            return Leaf(name, "rectangle")
+            return Leaf(name, "rectangle", icon_factory, depth)
         else:
-            return Composite(name, "rectangle")
+            return Composite(name, "rectangle", icon_factory, depth)
 
 class IconFactory:
     def get_icon(self, node_type):
@@ -36,7 +36,7 @@ class NothingIconFactory(IconFactory):
 class configIconFactory(IconFactory):
     def get_icon(self, node_type):
         icons = {}
-        with open("config.json") as f:
+        with open("config\config.json") as f:
             data = json.load(f)
             for key, value in data.items():
                 # print(key, value)
